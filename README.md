@@ -1,4 +1,4 @@
-lucid_utils
+lucid-utils
 ===========
 
 ...

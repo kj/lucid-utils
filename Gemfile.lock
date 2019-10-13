@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    lucid_utils (0.0.1)
+    lucid-utils (0.1.1)
 
 GEM
   remote: https://rubygems.org/
@@ -11,7 +11,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  lucid_utils!
+  lucid-utils!
 
 BUNDLED WITH
    2.0.1
