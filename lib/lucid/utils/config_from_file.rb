@@ -3,13 +3,15 @@
 module Lucid
   module Utils
     class ConfigFromFile
+      # Read configuration from a file where the last expression is a hash.
+      #
       # @param path [String]
       # @param env_prefix [String, nil] environment variables override values in the file
       #
       # @return [Hash]
       def call(path, env_prefix: nil)
         instance_eval(File.read(path)).tap do |result|
-          raise TypeError, 'not and instance of Hash' unless result.is_a?(Hash)
+          raise TypeError, 'not a hash' unless result.is_a?(Hash)
         end.then do |config|
           env_prefix ? env_overrides(config, env_prefix) : config
         end
